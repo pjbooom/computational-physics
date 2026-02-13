@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 content=np.loadtxt('/content/velocities.txt')
 x=content[:,0]
 f=content[:,1]
-N=100
 distance=np.zeros(len(x))
 for i in range(1,len(x)):
   base=0.5*(x[i]-x[i-1])
