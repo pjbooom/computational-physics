@@ -1,3 +1,4 @@
+import numpy as np
 def f(x):
   return x**4-2*x+1
 a=0
@@ -9,4 +10,8 @@ for k in range(1,N,2):
   s+=f(a+k*h)
 for k in range(2,N,2):
   s+=f(a+k*h)
-print((h*s)/3)
+u=(h*s)/3
+print(u)
+exact=4.4
+error=np.abs(u-exact)/np.abs(exact)
+print(100*error)
