@@ -16,3 +16,4 @@ for k in range(2,N,2):
 print((h*s)/3)
 plt.plot(t,rate)
 plt.show()
+#EXTENDED SIMPSOn's rule, we cannot plot distcance vs time
