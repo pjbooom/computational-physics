@@ -1,5 +1,5 @@
 def f(x):
-  return x**4-2*x+1;
+  return x**4-2*x+1
 a=0
 b=2
 N=1000
