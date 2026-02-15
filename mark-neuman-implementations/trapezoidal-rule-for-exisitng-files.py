@@ -7,7 +7,7 @@ distance=np.zeros(len(t))
 for k in range(1,len(t)):
   h=(t[k]-t[k-1])
   area=0.5*h*(f[k]+f[k-1])
-  distance[k]=disatnce[k-1]+area
+  distance[k]=distance[k-1]+area
 fig,axes=plt.subplot(2,1,1)
 print(distance[-1])
 axes[0].plot(t,f)
