@@ -9,7 +9,7 @@ s,d=0,0
 def J(m,x):
     d=0
     for k in range(0,N,2):
-        s=h*(np.cos(m*(a+k*h)-x*np.sin(a+k*h))+4*(np.cos(m*(a+(k+1)*h)-x*np.sin(a+(k+1)*h)))+np.cos(m*(a+(k+2)*h)-x*np.sin(a+(k+2)*h)))/3
+        s=h*(np.cos(m*(a+k*h)-x*np.sin(a+k*h))+4*(np.cos(m*(a+(k+1)*h)-x*np.sin(a+(k+1)*h)))+np.cos(m*(a+(k+2)*h)-x*np.sin(a+(k+2)*h)))/3    #BESSEL FUNCTION(addition of all lights from cricular aperture)
         d+=s
     return d/pi
 x=np.linspace(0,20,200)
@@ -30,7 +30,7 @@ X,Y=np.meshgrid(t,u)
 R=np.sqrt(X**2+Y**2)
 k=(2*pi)/(500e-9)
 I=np.zeros_like(R)
-I = (J(1, k*R)/(k*R))**2
+I = (J(1, k*R)/(k*R))**2    #Intensity of light
 I[R==0] = 0.25
 plt.imshow(I,
            extent=[-1e-6, 1e-6, -1e-6, 1e-6],
